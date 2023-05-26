@@ -1,0 +1,285 @@
+/* https://piccalil.li/blog/a-modern-css-reset*/
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* advent-pro-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Advent Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../../src/fonts/advent/advent-pro-v20-latin/advent-pro-v20-latin-regular.woff') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
+       url('../../src/fonts/advent/advent-pro-v20-latin/advent-pro-v20-latin-regular.woff2') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* angkor-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Angkor';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../../src/fonts/angkor/angkor-v28-latin/angkor-v28-latin-regular.woff') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
+       url('../../src/fonts/angkor/angkor-v28-latin/angkor-v28-latin-regular.woff2') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+
+header{
+  display: flex;
+  justify-content: space-evenly;
+  color: #3FA6A6;
+  padding: 20px 0;
+}
+nav{
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px; /*mettre un space entre des éléments*/
+  background-color: #3FA6A6;
+  font-family: 'Advent Pro';
+  padding: 5px 20px 5px 0;
+}
+h1, h2{
+  font-family: 'Angkor';
+  font-size: 1rem;
+}
+
+.main-title{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.main-logo{
+  max-width: 50px;
+}
+.basket{
+  max-width: 20px;
+}
+.trash-nav{
+  max-width: 20px;
+}
+.main-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.products{
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 30px 20px;
+  padding: 10px;
+  display: flex;
+  border: 1px solid #3FA6A6;
+  border-radius: 10px;
+  text-align: center;
+}
+.main-picture{
+  max-width: 50px;
+}
+.name-product{
+  letter-spacing: 0.1rem;
+  font-family: 'Advent Pro';
+  font-size: small;
+  min-width: 60%;
+}
+.products-description{
+  background-color: grey; 
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #a09f9f;
+  border-radius: 10px;
+  padding: 10px;
+  gap: 10px; 
+}
+.products-description > button > img{
+  max-width: 25px;
+}
+.products-description > button{
+  border-radius: 5px;
+}
+
+.belowPrice{
+  margin: auto auto;
+  padding: 10px;
+  display: flex;
+  justify-content:space-evenly;
+  flex-direction: row;
+  align-items:center;
+  gap: 30px;
+  max-height: 5vh;
+  max-width: 75vw;
+  border: 1px solid #3FA6A6;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.belowPrice > button{
+  max-width: 5vh;
+  max-height: 3vh;
+}
+.belowPrice > button > img{
+  max-height: 2vh;
+}
+
+footer{
+  background-color: #3FA6A6;
+  color: #F0F0F0;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  
+}
+.separation{
+  margin: 10px;
+  display: block;
+  background-color: #F0F0F0;
+  width : 80vw;
+  height: 2px;
+  border-radius: 10rem;
+}
+
+.contact{
+  all:unset;
+  border-radius: 10px;
+  padding: 5px;
+  color: grey;
+  background-color: #f0f0f0;
+}
+a{
+  color: #F0F0F0;
+}
+
+@media screen and (min-width: 768px) {
+    
+    body{
+      font-size: 3rem;
+      margin: 100px;
+    }
+    h1{
+      font-size: 5rem;
+      letter-spacing: 0.3rem;
+    }
+    h2{
+      font-size: 2rem;
+      letter-spacing: 0.3rem;
+    }
+    .main-logo{
+      max-width: 200px;
+    }
+    nav{
+      letter-spacing: 0.2rem;
+      font-size: 2rem;
+    }
+    footer{
+      flex-direction: row;
+      justify-content: space-evenly;
+      font-size: 4rem;
+    }
+    .contact{
+      border-radius: 20px;
+    }
+    .separation{
+      height: 10vh;
+      width: 2px;
+    }
+    .basket , .trash-nav{
+      max-width: 30px;
+    }
+    /*.products{
+      max-width: 50%;
+      align-items: center;
+      gap: 100px;
+    }*/
+    .products-description{
+      max-height: 10vh;
+      align-items: center;
+    }
+    .products-description > p{
+      font-size: 0.5em;
+    }
+    .price-total{
+      font-size: 0.8em;
+    }
+    .price-total > img{
+      max-height: 2rem;
+    }
+    .price-U{
+      font-size: 0.8em;
+    }
+}

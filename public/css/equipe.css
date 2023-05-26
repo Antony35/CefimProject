@@ -1,0 +1,373 @@
+@font-face {
+    font-family: 'Advent Pro';
+    src: url('../../src/fonts/advent/advent-pro-v20-latin-regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Angkor';
+    src: url('../../src/fonts/angkor/angkor-v28-latin-regular.woff2') format('woff2');
+}
+
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+h1, h2 {
+    font-family: 'Angkor';
+    font-size: 1.1rem;
+}
+
+h3, h4 {
+    font-family: 'Angkor';
+    font-weight: bolder;
+}
+
+/* Partie HEADER */
+header {
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: space-evenly;
+    color: #3FA6A6;
+    padding: 20px 0;
+}
+
+.header-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+header img {
+    max-width: 50px;
+    height: auto;
+}
+/* Partie HEADER */
+
+/* Partie NAV */
+nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    background-color: #3FA6A6;
+    font-family: "advent-pro";
+    padding: 5px 20px 5px 0;
+    text-decoration: none;
+    color: #f0f0f0;
+}
+
+nav img {
+    max-width: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #f0f0f0;
+}
+/* Partie NAV */
+
+/* Partie FOOTER */
+footer {
+    background-color: #3FA6A6;
+    color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+/*  position: fixed; */
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.button {
+    margin-top: 20px;
+    color: black;
+    display: inline-block;
+    padding: 10px 20px;
+
+}
+
+button {
+    display: inline-block;
+    padding: 5px 10px;
+    border: 1px solid #ffff;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    font-family: 'Advent Pro';
+}
+
+.ligne {
+    margin: 10px;
+    display: block;
+    background-color: #f0f0f0;
+    width: 80vw;
+    height: 2px;
+}
+
+.copyright {
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Advent Pro';
+}
+
+.copyright a {
+    text-decoration: none;
+    color: #f0f0f0;
+}
+/* Partie FOOTER */
+
+/* Partie MAIN */
+main {
+    margin: 0 10px;
+    max-height: calc(100vh - 240px);
+    overflow: auto;
+}
+
+.button-add {
+    display: flex;
+    justify-content: center;
+}
+
+.add {
+    margin-top: 15px;
+}
+
+.container-main {
+    padding-bottom: 100px;
+}
+
+.fonction {
+    text-align: center;
+    
+}
+
+.draw, .add {
+    max-width: 10px;
+    height: auto;
+}
+
+.modifier-prenom, .modifier-poste, .add {
+    background-color: #fff ;
+}
+
+h3 {
+    margin-top: 10px;
+}
+
+.presentation-equipe {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 100px;
+}
+
+.equipe-presentation {
+    margin: auto; 
+    margin-top: 10px;
+    border: solid 1px #0000;
+    font-family: 'Advent Pro';
+}
+
+.portrait {
+    max-width: 40px;
+    border-radius: 50%;
+    margin: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.personnel-item {
+    margin-bottom: 90px;
+    max-height: 410px;
+}
+
+.description{
+    margin-top: 10px;
+    margin-bottom: 60px;
+    font-family: 'Advent Pro';
+    font-weight: 200;
+    line-height: 20px;
+}
+/* Partie MAIN */
+
+@media screen and (min-width: 768px) {
+    body {
+        letter-spacing: 0.15rem;
+    }
+    header img {
+        max-width: 90px;
+        height: auto;
+    }
+    .header-title h1, h2 {
+        font-size: 2.2rem;
+    }
+    nav {
+        font-size: 1.3rem;
+    }
+    nav img {
+        max-width: 25px;
+    }
+    main {
+        margin: 0 10px;
+        max-height: calc(100vh - 340px);
+        overflow: auto;
+    }
+    .presentation-equipe {
+        margin: 10px 10px 125px 10px;       
+    }
+    main h3{
+        text-align: start;
+        font-size: 2.3rem;
+    }
+    .equipe-presentation {
+        text-align: start;
+        font-size: 1.3rem;
+    }
+    .personnel-item {
+        display: flex;
+        height: 30vh;
+        gap: 20px;
+    }
+    .fonction {
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-content: center;
+        margin-top: 60px;
+    }
+    main h4{
+        text-align: start;
+        font-size: 1.6rem;
+    }
+    .portrait {
+        margin: 0;
+        max-width: 120px;
+    }
+    .modifier-prenom, .modifier-poste {
+        display: flex;
+        justify-content: flex-start;
+    }
+    .description {
+        text-align: start;
+        font-size: 1.3rem;
+    }
+    .draw, .add {
+        max-width: 20px;
+        height: auto;
+    }
+    .copyright {
+        font-size: 1.1rem;
+    }
+    button {
+        padding: 5px 20px;
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    header img {
+        max-width: 120px;
+    }
+    .header-title h1, h2 {
+        font-size: 2.8rem;
+    }
+    nav {
+        font-size: 1.6rem;
+    }
+    nav img {
+        max-width: 35px;
+    }
+    main {
+        max-height: calc(100vh - 314px);
+    }
+    .personnel-item {
+        margin-bottom: 110px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+    

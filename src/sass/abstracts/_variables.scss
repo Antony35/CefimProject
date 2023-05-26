@@ -1,0 +1,17 @@
+//color
+$primary: #3fa6a6;
+$secondary: #F0F0F0;
+
+/* Media size : breakpoint */
+$breakpoint: (
+  tiny-screen       : 320px,
+  tiny-plus-screen  : 484px,
+  small-screen      : 640px,
+  small-plus-screen : 768px,
+  medium-screen     : 960px,
+  medium-plus-screen: 1023px,
+  large-screen      : 1278px,
+  large-plus-screen : 1439px,
+  extra-large-screen: 1600px,
+  ultra-large-screen: 1920px,
+);

@@ -1,0 +1,47 @@
+footer {
+  min-width: 200px;
+  padding: 20px 0;
+  background-color: $primary;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
+  button {
+   all: unset;
+   color: $primary;
+   border-radius: 10px;
+   padding: 5px;
+   background-color: $secondary; 
+   display: block;
+   &:hover {
+    color: darken($color: $primary, $amount: 10);
+    transform: scale(1.1);
+   }
+   &:active {
+    transform: scale(1) translate(-2px, -2px);
+   }
+
+  }
+  .separation-line-footer {
+    height: 2px;
+    width: 80vw;
+    background-color: #fff;
+    margin: 10px 0;
+    border-radius: 10rem;
+  }
+  @include small-plus-screen {
+    flex-direction: row;
+    justify-content: space-evenly;
+    .separation-line-footer {
+      width: 2px;
+      height: 100px;
+    }
+  }  
+}

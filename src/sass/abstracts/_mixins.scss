@@ -1,0 +1,29 @@
+@mixin tiny-plus-screen() {
+  @media screen and (min-width : map-get($breakpoint, tiny-plus-screen)) {
+  @content;
+  }
+}
+
+@mixin small-screen() {
+  @media screen and (min-width : map-get($breakpoint, small-screen)) {
+  @content;
+  }
+}
+
+@mixin small-plus-screen() {
+  @media screen and (min-width : map-get($breakpoint, small-plus-screen)) {
+  @content;
+  }
+}
+
+@mixin medium-plus-screen() {
+  @media screen and (min-width : map-get($breakpoint, medium-plus-screen)) {
+  @content;
+  }
+}
+
+@mixin large-plus-screen() {
+  @media screen and (min-width : map-get($breakpoint, large-screen)) {
+  @content;
+  }
+}

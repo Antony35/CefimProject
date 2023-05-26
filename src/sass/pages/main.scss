@@ -1,0 +1,128 @@
+body {
+  background-color: $secondary;
+}
+section {
+  display: flex;
+  justify-content: center;
+  .list-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include small-screen {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 50px;
+    }
+    @include medium-plus-screen {
+      grid-template-columns: repeat(3, 1fr);
+    } 
+    @include large-plus-screen {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    .item {
+      max-width: 90vw;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      @include small-screen {
+        width: calc(100vw / 2 - 100px);
+        justify-content: center;
+        align-items: center;  
+      }
+      @include medium-plus-screen {
+        width: calc(100vw / 3 - 100px);
+      }
+      @include large-plus-screen {
+        width: calc(100vw / 4 - 100px);
+      }
+      &__price, &__name {
+        letter-spacing: .1rem;
+        font-weight: 900;
+        padding: 5px;
+        color: #fff;
+        background-color: $primary;
+        position: relative;
+      }
+      &__price {
+        z-index: 2;
+        border-radius: 10px 10px 0 10px;
+        align-self: flex-start;
+        top: calc(1rem + 18px);
+      }
+      &__name {
+        border-radius: 0 0 10px 10px;
+        align-self: flex-end;
+        bottom: calc(1rem + 18px);
+        min-width: 100%;
+        @include small-screen {
+          min-height: 60px;
+        }
+      }
+      img {
+        border-radius: 10px;
+        border: 1px solid $primary;
+      }
+      > img:hover {
+        display: block;
+        transform: scale(1.05)translateY(-50px) ;
+        position: relative;
+        z-index: 1;
+        transition: 200ms ease-in-out;
+      }
+      &__total {
+        text-align: center;
+        min-width: 46px;
+      }
+      &__button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        position: relative;
+        bottom: 20px;
+        max-width: 25px;
+        img {
+          border: none;
+        }
+        :not(.euro, p, span) {
+          border: none;
+          &:hover {
+            border: 1px solid green;
+          }
+          &:active  {
+            transition: 5ms ease-in-out;
+            transform: translate(2px, 2px);
+            color: #fff;
+            border: 1px solid $primary;
+
+          }
+        }
+      }
+      &__description {
+        min-height: 100px;
+        border-bottom: 2px solid $primary;
+      }
+      &__stack {
+        display: flex;
+        align-items: flex-start;
+        gap: 5px;
+        min-height: 40px;
+        img {
+          border: none;
+          max-width: 30px;
+        }
+      }
+    }
+  }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: 400ms ease-in-out;
+}

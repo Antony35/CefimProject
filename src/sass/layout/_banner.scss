@@ -1,0 +1,27 @@
+  .banner {
+    display: flex;
+    flex-direction: column;
+    max-width: 690px;
+    background-color: $primary;
+    border-radius: 20px;
+    margin: 30px auto;
+    overflow: hidden;
+    &__slider {
+      display: flex;
+    }
+    img   {
+    animation: slider 6000ms linear infinite alternate;
+      max-height: 366px; 
+    }
+  }
+@keyframes slider {
+  0%, 30% {
+    transform: translateX(0%);
+  }
+  35%, 65% {
+    transform: translateX(-100%);    
+  }
+  70%, 100% {
+    transform: translateX(-200%);    
+  }
+}

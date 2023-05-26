@@ -1,0 +1,60 @@
+nav {
+  height: 50px;
+  letter-spacing: .2rem;
+  background-color: $primary;
+  color: #fff;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+  padding: 5px 10px 5px  0;
+  display: flex;
+  @include small-plus-screen {
+    padding-right: 50px;
+    * {
+      animation: comeFromRight 1500ms ease-in-out 0ms 1 normal forwards;
+    }
+  }
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+  p {
+    background-color: green;
+    border-radius: 15px;
+    padding: 5px 10px;
+  }
+  img {
+    max-width: 20px;
+  };
+  @include small-plus-screen {
+    font-size: 1.2rem;
+  }
+  img {
+    max-width: 25px;
+  }
+  :not(p):hover  {
+    display: block !important; 
+    transform: scale(1.1) !important;
+    color: rgb(109, 104, 104) !important;
+  }
+  :not(p):active {
+    color: white !important;
+    transform: translate(2px, 2px) !important;
+  }
+}
+
+@keyframes comeFromRight {
+  0%, 60% {
+    transform: translateX(-100vw);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.fixed {
+  position: fixed;
+  min-width: 100vw;
+  z-index: 1;
+  top: 0;
+}
