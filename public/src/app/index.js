@@ -12,12 +12,12 @@ items.forEach((item) => {
     <img src="${item.img}">
     <p class="item__name">${item.name}</p>
     <div class="item__button">
-      <img id='btn-less' src="../src/assets/remove.png" alt="bouton moins">
+      <img id='btn-less' src="./src/assets/remove.png" alt="bouton moins">
       <p id='quantity'>0</p>
-      <img id='btn-add' src="../src/assets/add.png" alt="bouton plus">
-      <img class='euro' src="../src/assets/euro.png" alt="euro">
+      <img id='btn-add' src="./src/assets/add.png" alt="bouton plus">
+      <img class='euro' src="./src/assets/euro.png" alt="euro">
       <span class="item__total">0</span>
-      <img id='item-bin' src="../src/assets/delete-black.png" alt="bouton supprimer">
+      <img id='item-bin' src="./src/assets/delete-black.png" alt="bouton supprimer">
     </div>
     <div class="item__stack"></div>
     <p class="item__description">${item.description}</p>
